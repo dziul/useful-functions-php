@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Pegar o IP* real do usuário
  * @param bool $encrypted  Criptografar ou não
