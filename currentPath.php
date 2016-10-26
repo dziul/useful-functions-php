@@ -1,8 +1,9 @@
 ﻿<?php 
  /**
+ * Fucntion
  * Definir caminho correto | caminhoLocal e caminhoServidor
- * @param string $localPath path do LocalHost  ex: /
- * @param string $serverPath path do Servidor
+ * @param string $localPath path do LocalHost  ex: /data/site  | /data/site/index.html
+ * @param string $serverPath path do Servidor  ex: /server/test/site  | /server/test/site/index.html
  * @param bool $isServer 
  * @param string $nameHost 
  * @param bool $dirRoot 
@@ -36,12 +37,13 @@
  }
 
 /**
- * Saber a URI 
+ * Fucntion
+ * Saber a URI correta 
  * @subpackage subpackagename function::currentPath()
- * @param string $localPath 
- * @param string $serverPath 
- * @param string $nameHost 
- * @return string
+ * @param string $localPath path do LocalHost  ex: /data/site  | /data/site/index.html
+ * @param string $serverPath path do Servidor  ex: /server/test/site  | /server/test/site/index.html
+ * @param string $nameHost Nome do Host. default: $_SERVER[HTTP_HOST]  ex: www.edxample.com
+ * @return string ex: http://www.example.com/data/site | http://www.example.com/data/site/index.html
  */
 function currentURI( $localPath='',  $serverPath='',  $nameHost='')
 {
