@@ -1,20 +1,20 @@
 ﻿<?php 
  /**
- * Fucntion
  * Definir caminho correto | caminhoLocal e caminhoServidor
- * @param string $localPath path do LocalHost  ex: /data/site  | /data/site/index.html
- * @param string $serverPath path do Servidor  ex: /server/test/site  | /server/test/site/index.html
+ * @param string $localPath path do LocalHost  ex: /
+ * @param string $serverPath path do Servidor
  * @param bool $isServer 
  * @param string $nameHost 
  * @param bool $dirRoot 
  * @return string
  */
-
- function currentPath( string $localPath='', string $serverPath='', bool $isServer=true, string $nameHost='', bool $dirRoot=true )
+ function currentPath( $localPath='', $serverPath='',  $isServer=true,  $nameHost='',  $dirRoot=true )
  {
 
  	$rootDirectory = $_SERVER['CONTEXT_DOCUMENT_ROOT']; // diretorio ROOT
+
  	$isLocalHost = $_SERVER['SERVER_NAME'] == 'localhost';
+
  	$path = $isLocalHost ? $localPath : $serverPath;
 
 
@@ -36,15 +36,14 @@
  }
 
 /**
- * Fucntion
- * Saber a URI correta 
+ * Saber a URI 
  * @subpackage subpackagename function::currentPath()
- * @param string $localPath path do LocalHost  ex: /data/site  | /data/site/index.html
- * @param string $serverPath path do Servidor  ex: /server/test/site  | /server/test/site/index.html
- * @param string $nameHost Nome do Host. default: $_SERVER[HTTP_HOST]  ex: www.edxample.com
- * @return string ex: http://www.example.com/data/site | http://www.example.com/data/site/index.html
+ * @param string $localPath 
+ * @param string $serverPath 
+ * @param string $nameHost 
+ * @return string
  */
-function currentURI(string $localPath='', string $serverPath='', string $nameHost='')
+function currentURI( $localPath='',  $serverPath='',  $nameHost='')
 {
 	return currentPath($localPath, $serverPath, false, $nameHost);
 }
