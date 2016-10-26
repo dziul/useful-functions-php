@@ -30,7 +30,7 @@
  	
  	if( empty($nameHost) ) $nameHost = $_SERVER['HTTP_HOST']; // pega o nameHost atual ex: www.example.com  || $_SERVER['SERVER_NAME'] => pega o nome real
  	$protocol = is_numeric(strrpos(strtolower($_SERVER['SERVER_PROTOCOL']), 'https')) ? 'https://':'http://'; // saber o protocolo atual
- 	return $protocol . $nameHost; // outset ex: http://www.example.com/path/hola_mundo
+ 	return $protocol . $nameHost . $path; // outset ex: http://www.example.com/path/hola_mundo
 
 
  }
