@@ -1,4 +1,4 @@
-﻿<?php 
+<?php 
  /**
  * Fucntion
  * Definir caminho correto | caminhoLocal e caminhoServidor
@@ -9,7 +9,7 @@
  * @param bool $dirRoot 
  * @return string
  */
- function currentPath( $localPath='', $serverPath='',  $isServer=true,  $nameHost='',  $dirRoot=true )
+ function current_path( $localPath='', $serverPath='',  $isServer=true,  $nameHost='',  $dirRoot=true )
  {
 
  	$rootDirectory = $_SERVER['CONTEXT_DOCUMENT_ROOT']; // diretorio ROOT
@@ -45,7 +45,7 @@
  * @param string $nameHost Nome do Host. default: $_SERVER[HTTP_HOST]  ex: www.edxample.com
  * @return string ex: http://www.example.com/data/site | http://www.example.com/data/site/index.html
  */
-function currentURI( $localPath='',  $serverPath='',  $nameHost='')
+function current_uri( $localPath='',  $serverPath='',  $nameHost='')
 {
 	return currentPath($localPath, $serverPath, false, $nameHost);
 }

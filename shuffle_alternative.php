@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Shuffle alternativo | Mater as chaves
+ * Shuffle alternativo | mantém as chaves
  * @param type &$array 
  * @return bool
  */
