@@ -4,7 +4,7 @@
  * Definir caminho correto | caminhoLocal e caminhoServidor
  * @param string $localPath path do LocalHost  ex: /data/site  | /data/site/index.html
  * @param string $serverPath path do Servidor  ex: /server/test/site  | /server/test/site/index.html
- * @param bool $isServer 
+ * @param bool $isServer //true: retorna o caminho do servidor |false: retorna o caminho versao URI
  * @param string $nameHost 
  * @param bool $dirRoot 
  * @return string
