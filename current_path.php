@@ -9,7 +9,7 @@
  * @param bool $dirRoot 
  * @return string
  */
- function current_path( $localPath='', $serverPath='',  $isServer=true,  $nameHost='',  $dirRoot=true )
+ function current_path( $localPath='', $serverPath='',  $nameHost='', $isServer=true  ,  $dirRoot=true )
  {
 
  	$rootDirectory = $_SERVER['CONTEXT_DOCUMENT_ROOT']; // diretorio ROOT
