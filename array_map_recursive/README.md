@@ -6,7 +6,7 @@ array array_map_recursive(callback|array $callback, array $array, bool $alsoTheK
 
 **features:**
 
-- Possible to use more than one callback (callback array);
+- Possible to use more than one callback (array);
 - When set `$alsoTheKey = true`, it will be possible to use the callback function in the key.
 
 
