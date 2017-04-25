@@ -36,10 +36,12 @@ $arr = [
 
 
 //example 1 (default)
+in_array_recursive('Ok', $arr) //result false
 in_array_recursive(['Ok', 'list'], $arr) //result false
 
 //example 2 (Check case-insensitive string comparison)
 in_array_recursive(['Ok', '154'], $arr,true) //result true
+in_array_recursive('Ok', $arr,true) //result true
 
 //example 3 (Check case-insensitive string comparison and check the value type)
 in_array_recursive(['Ok', '154'], $arr, true, true) //result false  .  Because the $needle = (string) '154' is different than (number)154 found.
