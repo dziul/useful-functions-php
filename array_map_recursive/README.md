@@ -1,7 +1,6 @@
 ### array_map_recursive
 
 ```php
-
 array array_map_recursive(callback|array $callback, array $array, bool $alsoTheKey=false)
 ```
 
