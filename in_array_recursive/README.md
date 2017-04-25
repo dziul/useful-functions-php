@@ -18,7 +18,7 @@ Check recursively if a value exists in an array.
 
 - **$haystack:** The Array
 
-- **$caseInsensitive: **`TRUE` Check case-insensitive string comparison. `FALSE` default.
+- **$caseInsensitive:** `TRUE` Check case-insensitive string comparison. `FALSE` default.
 
 - **$strict:** `TRUE` check the type of *$needle* in *$haystack*. `FALSE` default.
 
