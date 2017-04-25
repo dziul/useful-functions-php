@@ -1,4 +1,8 @@
 <?php
+/**
+ * @author Luiz Carlos Wagner <luizcarloswagner@gmail.com>
+ */
+
 
 /**
  * Array Map Recursive|Multidimencional. Tambem Multi callback. Chave&Valor
@@ -9,18 +13,19 @@
  */
 function array_map_recursive($callback, array $array, $alsoTheKey=false)
 {
+	$callback = (array)$callback; //force to array
 	$result = [];
 	foreach ($array as $key => $value) {
-		if (is_array($value)) $result[$key] = array_map_recursive($callback, $value);
-		else {
-			if (!is_array($callback)) {
-				if ($alsoTheKey) $key = $callback($key);
-				$result[$key] = $callback($value);
-				continue;
-			}
 
+		if(is_array($callback)) {
+			foreach ($callback as $fn) {
+				if ($alsoTheKey) $key = $fn($key);
+			}
+		}
+
+		if (is_array($value)) $result[$key] = array_map_recursive($callback, $value, $alsoTheKey);
+		else {
 			for ($i=0, $c = count($callback); $i < $c; $i++) { 
-				if ($alsoTheKey) $key = $callback[$i]($key);
 				$value = $callback[$i]($value);
 			}
 			$result[$key] = $value;
