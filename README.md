@@ -22,6 +22,23 @@ array array_map_recursive(callback|array $callback, array $array, bool $alsoTheK
 
 #### example:
 ```php
+//base array for test
+$arr = [
+	' test ' =>5,
+	' test2 ' => 6,
+	5 => [
+		' test ',
+		' xdebug ' => [
+			'mXs' => 'whereON',
+			66
+		]
+	],
+	8,
+	7954
+];
+```
+
+```php
 var_dump(array_map_recursive(['strtoupper','trim'], $arr));
 //result:
 array (size=5)
@@ -40,20 +57,6 @@ array (size=5)
 
 #### example (run also in key):
 ```php
-$arr = [
-	' test ' =>5,
-	' test2 ' => 6,
-	5 => [
-		' test ',
-		' xdebug ' => [
-			'mXs' => 'whereON',
-			66
-		]
-	],
-	8,
-	7954
-];
-
 var_dump(array_map_recursive(['strtoupper','trim'], $arr, true));// run also in key
 
 //result:
