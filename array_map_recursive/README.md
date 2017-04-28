@@ -1,5 +1,7 @@
 ### array_map_recursive
 
+base: [function.array-map](http://php.net/manual/function.array-map.php)
+
 ```php
 array array_map_recursive(callback|array $callback, array $array, bool $alsoTheKey=false)
 ```
