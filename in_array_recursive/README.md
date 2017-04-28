@@ -3,7 +3,7 @@
 base: [function.in-array](http://php.net/manual/function.in-array.php)
 
 ```php
-bool function in_array_recursive(mixed $needle, array $haystack [ , bool $caseInsensitive=false, bool $strict=false ])
+bool function in_array_recursive(mixed $needle, array $haystack [ , bool $caseInsensitive = false, bool $strict = false ])
 ```
 
 Check recursively if a value exists in an array.
