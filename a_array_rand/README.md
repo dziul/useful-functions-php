@@ -1,6 +1,8 @@
 ### a_array_rand
 
-Alternative Array Rand. base: [function.array-rand](http://php.net/manual/function.array-rand.php)
+8Alternative Array Rand*
+
+base: [function.array-rand](http://php.net/manual/function.array-rand.php)
 
 ```php
 array function a_array_rand(array $array , int $limit = 1 [ , bool $preserve_keys = false ] )
