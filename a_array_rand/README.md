@@ -13,7 +13,7 @@ Pick one or more random entries out of an array. A number of repeats is less tha
 **features:**
 
 - Possibility preserve keys
-- A number of repeats is less than array_rand . In a loop of 1000, `array_rand()` has more repeats compared to `a_array_rand()`
+- A number of repeats is less than `array_rand()` . In a loop of 1000, `array_rand()` has more repeats compared to `a_array_rand()`
 
 
 #### parameters:
