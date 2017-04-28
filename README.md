@@ -2,5 +2,6 @@
 
 ### functions
 
-- [array_map_recursive](https://github.com/darkziul/PHP_UsefulFunctions/tree/master/array_map_recursive)
-- [in_array_recursive](https://github.com/darkziul/PHP_UsefulFunctions/tree/master/in_array_recursive)
+- [array_map_recursive](array_map_recursive/)
+- [in_array_recursive](in_array_recursive/)
+- [a_array_rand](a_array_rand/)
