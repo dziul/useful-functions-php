@@ -1,6 +1,6 @@
 ### a_array_rand
 
-8Alternative Array Rand*
+*Alternative Array Rand*
 
 base: [function.array-rand](http://php.net/manual/function.array-rand.php)
 
