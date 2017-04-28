@@ -3,7 +3,7 @@
 Alternative Array Rand. base: [function.array-rand](http://php.net/manual/function.array-rand.php)
 
 ```php
-array function a_array_rand(array $array , int $limit = 1 [, bool $preserve_keys = false] )
+array function a_array_rand(array $array , int $limit = 1 [ , bool $preserve_keys = false ] )
 ```
 
 Pick one or more random entries out of an array. A number of repeats is less than array_rand.
