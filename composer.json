@@ -19,9 +19,9 @@
   },
   "autoload": {
     "files": [
-        "usefulfunctionsphp/a_array_rand/a_array_rand.php",
-        "usefulfunctionsphp/in_array_r/in_array_r.php",
-        "usefulfunctionsphp/array_map_r/array_map_r.php"
+        "a_array_rand/a_array_rand.php",
+        "in_array_r/in_array_r.php",
+        "array_map_r/array_map_r.php"
     ]
   }
 }
