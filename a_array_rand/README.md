@@ -1,4 +1,4 @@
-### a_array_rand
+# a_array_rand
 
 *Alternative Array Rand*
 
