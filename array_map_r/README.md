@@ -1,9 +1,10 @@
-### array_map_recursive
+# array_map_r
+*Array Map Recursive*
 
 base: [function.array-map](http://php.net/manual/function.array-map.php)
 
 ```php
-array array_map_recursive(callback|array $callback, array $array, bool $alsoTheKey = false)
+array array_map_r(callback|array $callback, array $array, bool $alsoTheKey = false)
 ```
 
 **features:**
@@ -38,7 +39,7 @@ $arr = [
 ```
 
 ```php
-var_dump(array_map_recursive(['strtoupper','trim'], $arr));
+var_dump(array_map_r(['strtoupper','trim'], $arr));
 //result:
 array (size=5)
   ' test ' => string '5' (length=1)
@@ -56,7 +57,7 @@ array (size=5)
 
 #### example (run also in key):
 ```php
-var_dump(array_map_recursive(['strtoupper','trim'], $arr, true));// run also in key
+var_dump(array_map_r(['strtoupper','trim'], $arr, true));// run also in key
 
 //result:
 array (size=5)

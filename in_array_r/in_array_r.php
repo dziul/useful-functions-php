@@ -13,11 +13,11 @@
  * @param type|bool $strict TRUE checa o tipo de $needle também
  * @return bool
  */
-function in_array_recursive($needle, array $haystack, $caseInsensitive=false, $strict=false) 
+function in_array_r($needle, array $haystack, $caseInsensitive=false, $strict=false) 
 {
 	if (is_array($needle) && (bool)$needle) {
 		foreach ($needle as $value) {
-			if(!in_array_recursive($value, $haystack, $caseInsensitive, $strict)) return false;
+			if(!in_array_r($value, $haystack, $caseInsensitive, $strict)) return false;
 		}
 		return true;
 	}
@@ -26,7 +26,7 @@ function in_array_recursive($needle, array $haystack, $caseInsensitive=false, $s
 		
 		if (($strict ? $item === $needle : $item == $needle) ||
 			$caseInsensitive && !$strict && !is_array($item) && strcasecmp($needle, $item) === 0 ||
-			is_array($item) && in_array_recursive($needle, $item, $caseInsensitive, $strict))  return true;
+			is_array($item) && in_array_r($needle, $item, $caseInsensitive, $strict))  return true;
 	}
 	return false;		
 }

@@ -1,9 +1,10 @@
-### in_array_recursive
+# in_array_r
+*In Array Recursive and Multidimencional*
 
 base: [function.in-array](http://php.net/manual/function.in-array.php)
 
 ```php
-bool function in_array_recursive(mixed $needle, array $haystack [ , bool $caseInsensitive = false, bool $strict = false ])
+bool function in_array_r(mixed $needle, array $haystack [ , bool $caseInsensitive = false, bool $strict = false ])
 ```
 
 Check recursively if a value exists in an array.
@@ -38,19 +39,19 @@ $arr = [
 
 
 //example 1 (default)
-in_array_recursive('Ok', $arr) //result false
-in_array_recursive(['Ok', 'list'], $arr) //result false
+in_array_r('Ok', $arr) //result false
+in_array_r(['Ok', 'list'], $arr) //result false
 
 //example 2 (Check case-insensitive string comparison)
-in_array_recursive(['Ok', '154'], $arr,true) //result true
-in_array_recursive('Ok', $arr,true) //result true
+in_array_r(['Ok', '154'], $arr,true) //result true
+in_array_r('Ok', $arr,true) //result true
 
 //example 3 (Check case-insensitive string comparison and check the value type)
-in_array_recursive(['Ok', '154'], $arr, true, true) //result false  .  Because the $needle = (string) '154' is different than (number)154 found.
+in_array_r(['Ok', '154'], $arr, true, true) //result false  .  Because the $needle = (string) '154' is different than (number)154 found.
 
 //example 4 (check the value type)
-in_array_recursive(['Ok', 154], $arr, false, true) //result false  .  Because the $needle = (string)'Ok' is different than (string)'ok' found. 
+in_array_r(['Ok', 154], $arr, false, true) //result false  .  Because the $needle = (string)'Ok' is different than (string)'ok' found. 
 
 //example 4 (check the value type)
-in_array_recursive(154, $arr, false, true) //result true
+in_array_r(154, $arr, false, true) //result true
 ```

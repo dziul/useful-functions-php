@@ -11,7 +11,7 @@
  * @param type|bool $alsoTheKey TRUE ira afetar tambem a chaves
  * @return array Array modificada
  */
-function array_map_recursive($callback, array $array, $alsoTheKey=false)
+function array_map_r($callback, array $array, $alsoTheKey=false)
 {
 	$callback = (array)$callback; //force to array
 	$result = [];
@@ -23,7 +23,7 @@ function array_map_recursive($callback, array $array, $alsoTheKey=false)
 			}
 		}
 
-		if (is_array($value)) $result[$key] = array_map_recursive($callback, $value, $alsoTheKey);
+		if (is_array($value)) $result[$key] = array_map_r($callback, $value, $alsoTheKey);
 		else {
 			for ($i=0, $c = count($callback); $i < $c; $i++) { 
 				$value = $callback[$i]($value);
