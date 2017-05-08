@@ -1,6 +1,6 @@
 {
   "name": "darkziul/usefulfunctionsphp",
-  "type": "library",
+  "type": "files",
   "description": "Useful functions PHP",
   "keywords": [
     "simplecache",
