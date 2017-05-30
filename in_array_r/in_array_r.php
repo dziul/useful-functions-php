@@ -13,7 +13,7 @@
  * @param type|bool $strict TRUE checa o tipo de $needle também
  * @return bool
  */
-function in_array_r($needle, array $haystack, $caseInsensitive=false, $strict=false) 
+function in_array_r($needle, array $haystack, $caseInsensitive = false, $strict = false) 
 {
 	if (is_array($needle) && (bool)$needle) {
 		foreach ($needle as $value) {

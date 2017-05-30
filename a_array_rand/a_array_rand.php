@@ -10,16 +10,23 @@
  */
 function a_array_rand(array $array , $limit = 1, $preserve_keys = false )
 {
-	if (!$preserve_keys) {
-		shuffle($array);
-	    $r = [];//init
-	    for ($i = 0; $i < $limit; $i++) $r[] = $array[$i];
-	    return $limit == 1 ? [$r[0]] : $r;
-	}
 
 	$keys = array_keys($array);
 	shuffle($keys);	
 	$new = [];
-	foreach ($keys as $key) $new[$key] = $array[$key];
-	return array_slice($new, 0, $limit, true);
+	$i = 0;
+	foreach ($keys as $key) {
+		if($i >= $limit) {
+			break;
+		}
+
+		if(!$preserve_keys) {
+			$new[$i] = $array[$key];	
+		} else {
+			$new[$key] = $array[$key];	
+		}
+		
+		$i++;
+	}
+	return $new;
 }

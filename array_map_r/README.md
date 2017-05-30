@@ -39,7 +39,7 @@ $arr = [
 ```
 
 ```php
-array_map_r(['strtoupper','trim'], $arr);
+var_dump(array_map_r(['strtoupper','trim'], $arr));
 //result:
 array (size=5)
   ' test ' => string '5' (length=1)
@@ -57,7 +57,7 @@ array (size=5)
 
 #### example (run also in key):
 ```php
-array_map_r(['strtoupper','trim'], $arr, true);// run also in key
+var_dump(array_map_r(['strtoupper','trim'], $arr, true));// run also in key
 
 //result:
 array (size=5)
